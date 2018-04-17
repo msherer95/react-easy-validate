@@ -135,7 +135,7 @@ class MyForm extends ReactValidate {
 		<form>
 			{this.addValidation(groupInput)}
 			<input type="submit" value="Submit!">
-		</form>
+		<form/>
 	}
 }
 ```
