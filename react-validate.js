@@ -61,8 +61,7 @@ export class ReactValidate extends React.Component {
 			formattedInput = inputValue.trim();
 		}
 
-		let extraArgs = Object.values(this.validationParams[generalizedInputType]);
-		extraArgs = extraArgs ? extraArgs : [];
+		let extraArgs = this.validationParams[generalizedInputType] ? Object.values(this.validationParams[generalizedInputType]) : [];
 
 		this.setState({[inputType]: formattedInput});
 		this.handleWarning(warning(formattedInput, ...extraArgs));
@@ -80,10 +79,12 @@ export class ReactValidate extends React.Component {
 	}
 
 	addInputInteractions(input) {
+
 		let inputHandlers = {
 			onFocus: this.handleFocus,
 			onBlur: this.handleFocusOut,
-			onKeyUp: this.handleType
+			onChange: this.handleType,
+			value: this.state[input.props.name]
 		}
 
 

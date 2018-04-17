@@ -10,15 +10,20 @@ class MyForm extends ReactValidate {
 			integer: {
 				min: 0,
 				max: 100
+			},
+			fullName: {
+				
 			}
 		}
 	}
 
 	render() {
 		let integerInput = <input type='text' name='integer' />
+		let nameInput = <input type="text" name="fullName" />
 		return (
 			<form>
 				{this.addInputInteractions(integerInput)}
+				{this.addInputInteractions(nameInput)}
 			</form>
 		)
 	}
