@@ -6,7 +6,7 @@ This isn't intended to be a super-feature-rich library that competes with the be
 
 ## Goals for the Library
 
-* **Noob-Friendly:** Anyone who has a basic understanding of React should be able to use this without much trouble. Many React-specific validation libraries involve writing so much code that it can be overwhelming for fresh developers. This library aims to fix that.
+* **Noob-Friendly:** Anyone who has a basic understanding of React should be able to use this without much trouble. Many React-specific validation libraries involve writing so much code that it can be overwhelming for new developers. This library aims to fix that.
 
 * **Clear Separation of Concerns:** When all your validation code is in one place, your life can get a little messy. This library let's you designate a "settings" object, called `this.validationParams`. This is where you give instructions for how each of your input boxes should be validated. Handling warnings (errors), and formatting is performed in separate functions. Most importantly, these functions and "settings" objects are kept separate from the actual `<form>` component. 
 
@@ -140,7 +140,7 @@ class MyForm extends ReactValidate {
 }
 ```
 
-You can add any types of attributes you normally would to the input, except `onFocus`, `onBlur`, or `onChange`. You also cannot change the `handleFocus`, `handlingFocusOut` and `handleChange` methods. 
+You can add any types of attributes you normally would to the input, except `onFocus`, `onBlur`, or `onChange`. You also cannot change the `handleFocus`, `handleFocusOut` and `handleChange` methods. 
 
 ## Upcoming Features
 
